@@ -101,7 +101,7 @@ class Bcharity_Passion extends Widget_Base {
                         'label' => __( 'Goal Icon', 'bcharity' ),
                         'type'      => Controls_Manager::ICON,
                         'label_block'   => true,
-                        'default'   => 'fa fa-mobile',
+                        'default'   => 'fa-solid fa-mobile',
                         'options'   => bcharity_flaticon_list()
                     ],
                     [
@@ -116,7 +116,7 @@ class Bcharity_Passion extends Widget_Base {
                         'label' => __( 'Raised Icon', 'bcharity' ),
                         'type'      => Controls_Manager::ICON,
                         'label_block'   => true,
-                        'default'   => 'fa fa-mobile',
+                        'default'   => 'fa-solid fa-mobile',
                         'options'   => bcharity_flaticon_list()
                     ],
                     [

@@ -146,71 +146,71 @@
 			$scripts = array(
 				'style' => array(
 					array(
-						'handler'		=> 'google-font',
+						'handler'		=> 'bcharity-google-font',
 						'file' 			=> $this->google_font(),
 					),
 					array(
-						'handler'		=> 'bootstrap',
+						'handler'		=> 'bcharity-bootstrap',
 						'file' 			=> $cssPath.'bootstrap.min.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '5.3.8-4',
 					),
 					array(
-						'handler'		=> 'animate',
+						'handler'		=> 'bcharity-animate',
 						'file' 			=> $cssPath.'animate.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'owl-carousel',
+						'handler'		=> 'bcharity-owl-carousel',
 						'file' 			=> $cssPath.'owl.carousel.min.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'font-awesome',
+						'handler'		=> 'bcharity-font-awesome',
 						'file' 			=> $cssPath.'font-awesome.min.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '7.3.1-1',
 					),
 					array(
-						'handler'		=> 'themify',
+						'handler'		=> 'bcharity-themify',
 						'file' 			=> $cssPath.'themify-icons.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'flaticon',
+						'handler'		=> 'bcharity-flaticon',
 						'file' 			=> $cssPath.'flaticon.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'magnific-popup-css',
+						'handler'		=> 'bcharity-magnific-popup-css',
 						'file' 			=> $cssPath.'magnific-popup.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'nice-select-css',
+						'handler'		=> 'bcharity-nice-select-css',
 						'file' 			=> $cssPath.'nice-select.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'slick-css',
+						'handler'		=> 'bcharity-slick-css',
 						'file' 			=> $cssPath.'slick.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'default-css',
+						'handler'		=> 'bcharity-default-css',
 						'file' 			=> $cssPath.'default.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'style-css',
+						'handler'		=> 'bcharity-style-css',
 						'file' 			=> $cssPath.'style.css',
 						'dependency' 	=> array(),
 						'version' 		=> '1.0',
@@ -224,98 +224,84 @@
 				
 				'scripts' => array(
 					array(
-						'handler'		=> 'popper',
-						'file' 			=> $jsPath.'popper.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '4.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'bootstrap',
+						'handler'		=> 'bcharity-bootstrap',
 						'file' 			=> $jsPath.'bootstrap.min.js',
 						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '4.1.3',
+						'version' 		=> '5.3.8-4',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'magnific-popup-js',
+						'handler'		=> 'bcharity-magnific-popup-js',
 						'file' 			=> $jsPath.'jquery.magnific-popup.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'swiper-min-js',
+						'handler'		=> 'bcharity-swiper-min-js',
 						'file' 			=> $jsPath.'swiper.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'wow-min-js',
+						'handler'		=> 'bcharity-wow-min-js',
 						'file' 			=> $jsPath.'wow.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'jquery-smooth-scroll-js',
+						'handler'		=> 'bcharity-jquery-smooth-scroll-js',
 						'file' 			=> $jsPath.'jquery.smooth-scroll.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'instagram-feed-js',
+						'handler'		=> 'bcharity-instagram-feed-js',
 						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'masonry-pkgd-js',
-						'file' 			=> $jsPath.'masonry.pkgd.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'owl-carousel-js',
+						'handler'		=> 'bcharity-owl-carousel-js',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'jquery-nice-select-js',
+						'handler'		=> 'bcharity-jquery-nice-select-js',
 						'file' 			=> $jsPath.'jquery.nice-select.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'jquery-counterup-js',
+						'handler'		=> 'bcharity-jquery-counterup-js',
 						'file' 			=> $jsPath.'jquery.counterup.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'waypoints-min-js',
+						'handler'		=> 'bcharity-waypoints-min-js',
 						'file' 			=> $jsPath.'waypoints.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'jquery-ajaxchimp-js',
+						'handler'		=> 'bcharity-jquery-ajaxchimp-js',
 						'file' 			=> $jsPath.'jquery.ajaxchimp.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'slick-min-js',
+						'handler'		=> 'bcharity-slick-min-js',
 						'file' 			=> $jsPath.'slick.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
