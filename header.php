@@ -43,7 +43,7 @@
                                 $btn_lbl = !empty( bcharity_opt( 'header_btn_label' ) ) ? bcharity_opt( 'header_btn_label' ) : '';
                                 $btn_url = !empty( bcharity_opt( 'booking_btn_url' ) ) ? bcharity_opt( 'booking_btn_url' ) : '';
                             ?>
-                                <div class="cta-btn-head">
+                                <div class="cta-btn-head d-none d-lg-block">
                                     <a class="btn_1" href="<?php echo $btn_url?>"><?php echo $btn_lbl?></a>
                                 </div>
                         <?php } ?>
