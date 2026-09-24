@@ -294,15 +294,13 @@ if ( !class_exists( 'Bcharity_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', BCHARITY_DIR_ELEMENTOR . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
             // bcharity map custom js
-            wp_register_script( 'bcharity-map-custom', BCHARITY_DIR_ELEMENTOR . 'assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'bcharity-map-custom', BCHARITY_DIR_ELEMENTOR . 'assets/js/map-custom.js', array(), '1.0-s2', true );
 
             // bcharity companion main js
-            wp_enqueue_script( 'bcharity', BCHARITY_DIR_ELEMENTOR . 'assets/js/bcharity-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'bcharity', BCHARITY_DIR_ELEMENTOR . 'assets/js/bcharity-companion-main.js', array( 'bcharity-ui-js' ), '1.0-s2', true );
 
 
             wp_localize_script( 'bcharity', 'ajax_object',

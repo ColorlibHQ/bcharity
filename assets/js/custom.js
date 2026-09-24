@@ -1,7 +1,17 @@
-(function ($) {
-  "use strict";
+/**
+ * Bcharity front-end behaviour, without jQuery.
+ *
+ * The plugin calls keep the options they always had; ColorlibUI provides
+ * drop-in versions of Owl Carousel, Magnific Popup and AjaxChimp that build
+ * the same markup, so the theme's stylesheets apply unchanged.
+ */
+(function () {
+  'use strict';
 
-  $('.popup-youtube, .popup-vimeo').magnificPopup({
+  var UI = window.ColorlibUI;
+  if (!UI) return;
+
+  UI.magnific('.popup-youtube, .popup-vimeo', {
     // disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
@@ -10,26 +20,25 @@
     fixedContentPos: false
   });
 
-  $(document).ready(function() {
-    ColorlibUI.enhanceSelects('select');
-  });
+  UI.enhanceSelects('select');
+
   // menu fixed js code
-  $(window).scroll(function () {
-    var window_top = $(window).scrollTop() + 1;
-    if (window_top > 50) {
-      $('.main_menu').addClass('menu_fixed animated fadeInDown');
-    } else {
-      $('.main_menu').removeClass('menu_fixed animated fadeInDown');
-    }
+  UI.ready(function () {
+    var menus = UI.toElements('.main_menu');
+    if (!menus.length) return;
+    window.addEventListener('scroll', function () {
+      var windowTop = window.pageYOffset + 1;
+      menus.forEach(function (menu) {
+        if (windowTop > 50) {
+          menu.classList.add('menu_fixed', 'animated', 'fadeInDown');
+        } else {
+          menu.classList.remove('menu_fixed', 'animated', 'fadeInDown');
+        }
+      });
+    }, { passive: true });
   });
 
-$(document).ready(function() {
-  ColorlibUI.enhanceSelects('select');
-});
-
-var review = $('.client_review_part');
-if (review.length) {
-  review.owlCarousel({
+  UI.owl('.client_review_part', {
     items: 1,
     loop: true,
     dots: true,
@@ -37,12 +46,10 @@ if (review.length) {
     autoplayHoverPause: true,
     autoplayTimeout: 5000,
     nav: false,
-    smartSpeed: 2000,
+    smartSpeed: 2000
   });
-}
-var client = $('.client_logo');
-if (client.length) {
-  client.owlCarousel({
+
+  UI.owl('.client_logo', {
     items: 6,
     loop: true,
     dots: false,
@@ -57,29 +64,20 @@ if (client.length) {
         items: 3
       },
       577: {
-        items:3,
+        items: 3
       },
       991: {
-        items:5,
+        items: 5
       },
       1200: {
-        items: 6,
+        items: 6
       }
-    },
+    }
   });
-}
-//counter up
-ColorlibUI.counter('.count', { time: 2000 });
 
-//------- Mailchimp js --------//  
-function mailChimp() {
-  $('#mc_embed_signup').find('form').ajaxChimp();
-}
-mailChimp();
+  //counter up
+  UI.counter('.count', { time: 2000 });
 
-
-
-
-
-
-}(jQuery));
+  //------- Mailchimp js --------//
+  UI.ajaxChimp('#mc_embed_signup form');
+}());
