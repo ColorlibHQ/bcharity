@@ -14,6 +14,7 @@ function bcharity_sl_enqueue_scripts() {
 
 	wp_localize_script( 'bcharity-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'like'    => esc_html__( 'Like', 'bcharity' ),
 		'unlike'  => esc_html__( 'Unlike', 'bcharity' )
 	) );
 }
