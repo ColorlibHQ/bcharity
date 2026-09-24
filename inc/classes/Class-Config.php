@@ -245,13 +245,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'bcharity-wow-min-js',
-						'file' 			=> $jsPath.'wow.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'bcharity-jquery-smooth-scroll-js',
 						'file' 			=> $jsPath.'jquery.smooth-scroll.min.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -259,36 +252,8 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'bcharity-instagram-feed-js',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'bcharity-owl-carousel-js',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'bcharity-jquery-nice-select-js',
-						'file' 			=> $jsPath.'jquery.nice-select.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'bcharity-jquery-counterup-js',
-						'file' 			=> $jsPath.'jquery.counterup.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'bcharity-waypoints-min-js',
-						'file' 			=> $jsPath.'waypoints.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
@@ -309,10 +274,17 @@
 					),
 					
 					array(
+						'handler'		=> 'bcharity-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
+						'in_footer' 	=> true
+					),
+					array(
 						'handler'		=> 'bcharity-custom',
 						'file' 			=> $jsPath.'custom.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> $this->bcharity_version,
+						'dependency' 	=> array( 'jquery', 'bcharity-ui-js' ),
+						'version' 		=> $this->bcharity_version . '-s1',
 						'in_footer' 	=> true
 					),
 
